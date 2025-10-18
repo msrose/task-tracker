@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./build/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <template id="template:column-header">
+      <div
+        class="rounded-md border border-2 p-1 font-semibold shadow-md"
+        data-cn
+      >
+        <slot></slot>
+      </div>
+    </template>
+
+    <template id="template:task-item">
+      <div
+        class="cursor-pointer rounded-md border border-1 p-1 hover:bg-slate-300"
+        data-cn
+      >
+        <slot></slot>
+      </div>
+    </template>
+
+    <div class="space-y-4 p-4">
+      <h1 class="text-xl font-bold">Task Tracker</h1>
+      <div class="grid grid-cols-3 gap-4">
+        <column-header cn="bg-blue-200">Todo</column-header>
+        <column-header cn="bg-yellow-200">Doing</column-header>
+        <column-header cn="bg-green-200">Done</column-header>
+        <div class="space-y-2">
+          <task-item>Learn French</task-item>
+          <task-item>Watch Chelsea game</task-item>
+          <task-item>Learn Golang</task-item>
+          <task-item>Do chores</task-item>
+          <task-item>Empty dishwasher</task-item>
+        </div>
+        <div class="space-y-2">
+          <task-item>Watch soccer</task-item>
+          <task-item>Learn Tailwind</task-item>
+        </div>
+        <div class="space-y-2">
+          <task-item>Finish AODA training</task-item>
+          <task-item>Buy anniversary gift</task-item>
+          <task-item>Eat breakfast</task-item>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>

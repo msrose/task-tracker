@@ -1,0 +1,16 @@
+{
+  "name": "task-tracker",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "open public/index.html && npx @tailwindcss/cli -i src/input.css -o public/build/output.css --watch",
+    "format": "prettier --write public src"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tailwindcss": "^4.1.14"
+  }
+}
